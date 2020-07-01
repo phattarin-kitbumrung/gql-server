@@ -1,0 +1,14 @@
+version: '2'
+services:
+  gql-server:
+    build: .
+    image: gql-server
+    container_name: gql-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/gql-server'
+    restart: always
+    ports:
+      - '4000:4000'
